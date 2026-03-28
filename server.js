@@ -8,9 +8,13 @@ const cors = require("cors");
 
 const app = express();
 
-// 1. Konfigirasyon CORS ki byen fèt pou Netlify
+// 1. Konfigirasyon CORS ki byen fèt
 app.use(cors({
-  origin: ['https://rcglobal.netlify.app', 'http://localhost:3000'],
+  origin: [
+    'https://rcglobal.netlify.app', 
+    'http://localhost:3000',
+    'https://rc-frontend-beryl.vercel.app' // 👈 NOUVO LYEN AN LA
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
