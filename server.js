@@ -36,8 +36,5 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log("Mongo error:", err));
 
 
-// 4. PÒ POU SÈVÈ A LIMEN AN (Render ap chèche l pou l ka mache)
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Sèvè a ap mache byen sou pò ${PORT} 🚀`);
-});
+// 4. Konfigirasyon espesyal pou Vercel (Li ranplase app.listen an)
+module.exports = app;
