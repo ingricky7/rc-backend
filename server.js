@@ -25,10 +25,9 @@ const productRoutes = require("./routes/product");
 app.use("/api/products", productRoutes);
 
 // 👇 3. MWEN AJOUTE WOUT POU PEMAN AN POU OU 👇
-// Asire w ou gen yon dosye 'payment.js' anndan katab 'routes' ou a
-// Si w genyen l, retire "//" devan de liy kòd sa yo:
-// const paymentRoutes = require("./routes/payment");
-// app.use("/api/payment", paymentRoutes);
+// Wout peman yo debloke kounye a!
+const paymentRoutes = require("./routes/payment");
+app.use("/api/payment", paymentRoutes);
 
 
 // CONNECT MONGODB
